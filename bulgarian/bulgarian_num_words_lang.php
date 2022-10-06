@@ -1,5 +1,6 @@
 <?php
 
+$lang['num_word_0']        = 'Zero';
 $lang['num_word_1']        = 'Едно';
 $lang['num_word_2']        = 'Две';
 $lang['num_word_3']        = 'Три';
@@ -124,7 +125,8 @@ $currencies = [
     'EUR' => 'Euros',
 ];
 
-$currencies = do_action('before_number_format_render_languge_currencies', $currencies);
+$currencies = hooks()->apply_filters('before_number_format_render_languge_currencies', $currencies);
+
 foreach ($currencies as $key => $val) {
     $lang['num_word_' . strtoupper($key)] = $val;
 }

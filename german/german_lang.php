@@ -1652,7 +1652,6 @@ $lang['ticket_pipe_status']                                                   = 
 # Home
 $lang['home_latest_activity']                                                 = 'Letzte Aufgaben';
 $lang['home_my_tasks']                                                        = 'Meine Aufgaben';
-$lang['home_latest_activity']                                                 = 'Letzte Aufgaben';
 $lang['home_my_todo_items']                                                   = 'Meine ToDos';
 $lang['home_widget_view_all']                                                 = 'Alle anzeigen';
 $lang['home_stats_full_report']                                               = 'Komplette Aufzeichnung';
@@ -2448,15 +2447,10 @@ $lang['task_single_log_user']                                                 = 
 $lang['milestone_description']                                                = 'Beschreibung';
 $lang['description_visible_to_customer']                                      = 'Beschreibung dem Kunden zeigen';
 $lang['upcoming_tasks']                                                       = 'Kommende Aufgaben';
-$lang['paymentmethod_two_checkout_account_number']                            = 'Kontonummer (Verkäufer-ID)';
-$lang['paymentmethod_two_checkout_private_key']                               = 'Privater Schlüssel';
-$lang['paymentmethod_two_checkout_publishable_key']                           = 'öffentlicher Schlüssel';
 $lang['payment_credit_card_number']                                           = 'Kartennummer';
 $lang['payment_credit_card_expiration_date']                                  = 'Ablaufdatum';
 $lang['payment_billing_email']                                                = 'E-Mail';
 $lang['submit_payment']                                                       = 'Zahlung senden';
-$lang['2checkout_notice_payment']                                             = 'Kreditkartendaten werden über eine sichere Verbindung von 2Checkout verarbeitet';
-$lang['2checkout_usage_notice']                                               = 'Für die Nutzung der 2Checkout Bezahl-API ist SSL erforderlich. Dies ist für einen sicheren Verbindungsaufbau notwendig. Das System funktioniert auch ohne SSL, doch in diesem Fall wird außerhalb der Richtlinien gehandelt, was die Deaktivierung der API-Berechtigung zufolge haben kann.';
 $lang['custom_field_disallow_customer_to_edit']                               = 'Kunde darf dieses Feld nicht bearbeiten';
 $lang['project_due_notice']                                                   = 'Dieses Projekt ist seit %s Tagen überfällig';
 $lang['not_lead_added_attachment']                                            = 'hat eine neue Anlage zum Interessenten %s hinzugefügt';
@@ -2990,8 +2984,6 @@ $lang['signature']                                                            = 
 $lang['signature_image']                                                      = 'Unterschrift Bild';
 $lang['insert_checklist_templates']                                           = 'Checklistenvorlagen einfügen';
 $lang['save_as_template']                                                     = 'Als Vorlage speichern';
-$lang['scroll_responsive_tables_help']                                        = 'Tabellen mit großen Datenmengen werden horizontal gescrollt anstatt in Zeilen mit + Zeichen umgebrochen.';
-$lang['scroll_responsive_tables']                                             = 'Das Scrollen in responsiven Tabellen aktivieren';
 $lang['invoice_item_add_edit_rate_currency']                                  = 'Rate - %s';
 $lang['total_files_deleted']                                                  = 'Insgesamt gelöschte Dateien: %s';
 $lang['invalid_transaction']                                                  = 'Ungültige Transaktion. Bitte erneut versuchen.';
@@ -3438,20 +3430,267 @@ $lang['payment_sent_successfully']                                            = 
 $lang['payment_sent_failed']                                                  = 'Der Zahlungsbeleg konnte nicht gesendet werden.';
 
 # Version 2.3.5
-$lang['tags_update_replace_warning'] = 'Some tags are not updated because the name of the tag already exist';
-$lang['attach_statement']            = 'Attach Customer Statement';
+$lang['tags_update_replace_warning']                                          = 'Einige Tags werden nicht aktualisiert, weil der Name des Tags bereits existiert';
+$lang['attach_statement']                                                     = 'Kundenerklärung anfügen';
 
 # Version 2.4.0
-$lang['delete_credit_card']               = 'Delete Card';
-$lang['delete_credit_card_info']          = 'You cannot delete the credit card as you have active subscriptions.';
-$lang['credit_card_successfully_deleted'] = 'Credit card successfully deleted.';
-$lang['subscription_incomplete']          = 'Incomplete';
-$lang['subscription_incomplete_expired']  = 'Incomplete Expired';
-$lang['credit_card_short']                = 'Card';
-$lang['webhook_created']                  = 'Webhook created successfully.';
-$lang['subscriptions_terms_info']         = 'Enter customer terms & conditions to be displayed to the customer before subscribe to the subscription.';
-$lang['subscription_complete_payment']    = 'Complete Payment';
-$lang['subscription_is_subscription_is_expired'] = 'This subscription is expired.';
-$lang['subscription_plan_currency_does_not_match'] = 'Selected plan currency does not match currency selected below.';
-$lang['subscription_first_billing_date_info'] = 'Leave blank to use date when the customer is subscribed to the subscription. This field must be future date, if you select date and the date is passed but customer is not yet subscribed, the date when the customer will subscribe will be used.';
-$lang['stripe_subscription_select_plan'] = 'Select Stripe plan';
+$lang['delete_credit_card']                                                   = 'Karte löschen';
+$lang['delete_credit_card_info']                                              = 'Die Kreditkarte kann nicht gelöscht werden, da aktive Abonnements vorhanden sind.';
+$lang['credit_card_successfully_deleted']                                     = 'Kreditkarte wurde erfolgreich gelöscht.';
+$lang['subscription_incomplete']                                              = 'Unvollständig';
+$lang['subscription_incomplete_expired']                                      = 'Unvollständig abgelaufen';
+$lang['credit_card_short']                                                    = 'Karte';
+$lang['webhook_created']                                                      = 'Webhook wurde erfolgreich erstellt.';
+$lang['subscriptions_terms_info']                                             = 'Hier können die Geschäftsbedingungen eingegeben werden, die dem Kunden vor der Anmeldung zum Abonnement angezeigt werden sollen.';
+$lang['subscription_complete_payment']                                        = 'Zahlung abschließen';
+$lang['subscription_is_subscription_is_expired']                              = 'Dieses Abonnement ist abgelaufen.';
+$lang['subscription_plan_currency_does_not_match']                            = 'Ausgewählte Planwährung stimmt nicht mit der unten ausgewählten Währung überein.';
+$lang['subscription_first_billing_date_info']                                 = 'Leer lassen, um das Datum zu verwenden, an dem der Kunde das Abonnement abonniert hat. Dieses Feld muss ein zukünftiges Datum sein. Wenn das gewählte Datum überschritten ist, der Kunde aber noch nicht abonniert hat, wird das Datum verwendet, an dem der Kunde abonnieren wird.';
+$lang['stripe_subscription_select_plan']                                      = 'Stripe Plan auswählen';
+
+# Version 2.4.1
+$lang['contract_content_permission_edit_warning']                             = 'Deine aktuellen Berechtigungen erlauben es dir nicht, den Vertragsinhalt zu bearbeiten. Wende dich an einen Administrator, um die Berechtigung zum Bearbeiten von Verträgen zu erhalten.';
+$lang['mark_as_signed']                                                       = 'Als unterschrieben markieren';
+$lang['unmark_as_signed']                                                     = 'Als nicht-unterschrieben markieren';
+$lang['marked_as_signed']                                                     = 'Als unterschrieben markiert';
+$lang['contract_marked_as_signed_info']                                       = 'Dieser Vertrag wird manuell als unterschrieben markiert.';
+$lang['save_and_send_later']                                                  = 'Speichern und später senden';
+$lang['schedule']                                                             = 'Plan';
+$lang['schedule_email_for']                                                   = 'E-Mail planen für %s';
+$lang['schedule_date']                                                        = 'Wann soll die E-Mail gesendet werden?';
+$lang['email_scheduled_successfully']                                         = 'E-Mail erfolgreich geplant';
+$lang['invoice_will_be_sent_at']                                              = 'Die Rechnung wird versandt am %s';
+
+# Version 2.5.0
+$lang['recaptcha_ignore_ips']                                                 = 'Ignorierte IP-Adressen';
+$lang['recaptcha_ignore_ips_info']                                            = 'Kommagetrennte IP-Adressen eingeben, die die reCaptcha Validierung überspringen soll.';
+$lang['show_task_reminders_on_calendar']                                      = 'Aufgaben-Erinnerungen';
+$lang['contracts_about_to_expire']                                            = 'Bald auslaufende Verträge';
+$lang['no_contracts_about_to_expire']                                         = 'Es gibt keine Verträge, die in den nächsten %s-Tagen auslaufen.';
+$lang['lead_value']                                                           = 'Intressenten Wert';
+$lang['lead_value_tooltip']                                                   = 'Die Basiswährung wird verwendet.';
+$lang['leads_dt_lead_value']                                                  = 'Intressenten Wert';
+$lang['leads_canban_lead_value']                                              = 'Intressenten Wert: %s';
+$lang['lead_add_edit_lead_value']                                             = 'Intressenten Wert';
+
+# Version 2.6.0
+$lang['gantt_view_day']                                                       = 'Tagesansicht';
+$lang['gantt_view_week']                                                      = 'Wochenansicht';
+$lang['gantt_view_month']                                                     = 'Monatsansicht';
+$lang['gantt_view_year']                                                      = 'Jahresansicht';
+
+# Version 2.7.0
+$lang['hour_of_day_perform_tasks_reminder_notification_help']                 = '24-Stunden-Format: 9 für 9 Uhr morgens oder 15 für 15 Uhr abends. Wird für wiederkehrende Aufgaben, Aufgabenerinnerungen usw. verwendet.';
+$lang['clients_nav_contacts']                                                 = 'Kontakte';
+$lang['clients_my_contacts']                                                  = 'Kontakte';
+$lang['clients_my_contact']                                                   = 'Kontakt';
+$lang['new_contact']                                                          = 'Neuer Kontakt';
+$lang['customer_contact']                                                     = 'Meine Kontakte';
+$lang['clients_contact_added']                                                = 'Kontakt wurde erfolgreich hinzugefügt';
+$lang['clients_contact_updated']                                              = 'Kontakt wurde erfolgreich aktualisiert';
+$lang['allow_primary_contact_to_manage_other_contacts']                       = 'Dem Hauptkontakt erlauben, andere Kundenkontakte zu verwalten';
+$lang['contact_form_validation_is_unique']                                    = 'Kontakt mit diesem {field} besteht bereits in unserem System';
+$lang['invoice_number_not_applied_on_draft']                                  = 'Wenn die Rechnung als Entwurf gespeichert wird, wird die Nummer nicht übernommen. Stattdessen wird die nächste Rechnungsnummer angegeben, wenn die Rechnung an den Kunden gesendet wird oder die Rechnung als gesendet markiert wird.';
+$lang['two_factor_authentication_disabed']                                    = 'Deaktivert';
+$lang['enable_google_two_factor_authentication']                              = 'Google-Authenticator aktivieren';
+$lang['set_google_two_factor_authentication_failed']                          = 'Speichern der Authentifizierung fehlgeschlagen, bitte versuchen Sie es erneut';
+$lang['enter_two_factor_auth_code_from_mobile']                               = 'Authentifizierungscode aus der Authentifizierungsanwendung eingeben';
+$lang['staff_two_factor_authentication']                                      = 'Zwei-Faktor-Authentifizierung';
+$lang['google_authentication_code']                                           = 'Code aus Authentifizierungsanwendung eingeben';
+$lang['set_two_factor_authentication_successful']                             = 'Zwei-Faktor-Authentifizierungseinstellungen wurden erfolgreich aktualisiert';
+$lang['set_two_factor_authentication_failed']                                 = 'Zwei-Faktor-Authentifizierungseinstellungen konnte nicht aktualisieren werden';
+$lang['google_2fa_code_valid']                                                = 'Erfolgreiche Überprüfung der Authentifizierung';
+$lang['google_2fa_code_invalid']                                              = 'Ungültiger Authentifizierungscode eingegeben, versuchen Sie es erneut.';
+$lang['google_2fa_scan_qr_guide']                                             = 'Scannen Sie den unten stehenden QR mit der Google Authenticator-Anwendung auf Ihrem Mobilgerät und füllen Sie anschließend das unten stehende Feld mit dem in der Anwendung generierten Code aus';
+$lang['google_2fa_manul_input_secret']                                        = 'Geheimschlüssel für manuelle Eingabe';
+
+# Version 2.7.1
+$lang['templates']                                   = 'Templates';
+$lang['add_template']                                = 'Add Template';
+$lang['edit_template']                               = 'Edit Template';
+$lang['template_added']                              = 'Template added successfully';
+$lang['template_updated']                            = 'Template updated successfully';
+$lang['template_name']                               = 'Template Title';
+$lang['template_content']                            = 'Template Content';
+$lang['insert_template']                             = 'Insert';
+$lang['items_table_amounts_exclude_currency_symbol'] = 'Exclude currency symbol from items table Amount';
+
+$lang['multiplies_of']               = 'Multiplies of';
+$lang['round_off_task_timer_option'] = 'Round off task timer';
+$lang['task_timer_dont_round_off']   = 'Don\'t round off';
+$lang['task_timer_round_up']         = 'Round up';
+$lang['task_timer_round_down']       = 'Round down';
+$lang['task_timer_round_nearest']    = 'Round to nearest';
+$lang['calendar_task_reminder']      = 'Task Reminder';
+$lang['projects_chart']              = 'Projects Chart';
+$lang['overdue_by_days']             = 'OVERDUE BY %s DAYS';
+
+$lang['two_checkout_payment_processing'] = 'Payment is been processed,you will be notified if successful';
+$lang['two_checkout_payment_cancelled']  = 'Payment Cancelled';
+$lang['two_checkout_merchant_code']      = 'Merchant Code';
+$lang['two_checkout_secret_Key']         = 'Secret Code';
+$lang['two_gateway_webhook_notice']      = 'The IPN Endpoint for 2Checkout is ( %s )';
+$lang['something_went_wrong']            = 'Something went wrong. Try again';
+$lang['imap_folder']                     = 'Folder';
+$lang['retrieve_folders']                = 'Retrieve Folders';
+$lang['email_to_ticket_config']          = 'Email to ticket configuration';
+
+# Version 2.8.0
+$lang['enable_support_menu_badges']     = 'Enable support menu item badge';
+$lang['item_copy_success']              = 'Item copied successfully';
+$lang['item_copy_fail']                 = 'Failed to copy item';
+$lang['attach_invoice_to_payment_receipt_email'] = 'Attach invoice PDF when sending payment receipt to email';
+
+$lang['estimate_request']                       = 'Estimate request';
+$lang['estimate_requests']                      = 'Estimate request';
+$lang['estimate_request_form']                  = 'Estimate request form';
+$lang['acs_estimate_request']                   = 'Estimate request';
+$lang['acs_estimate_request_forms']             = 'Forms';
+$lang['estimate_request_forms']             = 'Estimate Request Forms';
+$lang['estimate_request_notify_staff']          = 'Staff Members to Notify';
+$lang['estimate_request_notify_when_submitted']     = 'Notify when estimate request submitted';
+$lang['estimate_request_assignee']              = 'Responsible (Assignee)';
+$lang['estimate_request_notify_roles']          = 'Roles to Notify';
+$lang['custom_field_estimate_request']          = 'Estimate request';
+$lang['new_estimate_request_submitted_from_form']     = 'New Estimate Request submitted from Form - %s';
+$lang['acs_estimate_request_statuses_submenu']  = 'Statuses';
+$lang['estimate_request_dt_email']              = 'Email';
+$lang['estimate_request_dt_assigned']           = 'Assigned';
+$lang['estimate_request_dt_status']             = 'Status';
+$lang['estimate_request_dt_datecreated']        = 'Created';
+$lang['estimate_request_attachments']           = 'Attachments';
+$lang['estimate_request_new_status']            = 'New Status';
+$lang['estimate_request_status_table_name']     = 'Status Name';
+$lang['estimate_request_table_total']           = 'Total Request: %s';
+$lang['estimate_request_statuses_not_found']    = 'No Estimate Request statuses found';
+$lang['estimate_request_status_add_edit_name']  = 'Status Name';
+$lang['estimate_request_status_color']          = 'Color';
+$lang['estimate_request_status_add_edit_order'] = 'Status Order';
+$lang['estimate_request_status']                = 'Status';
+$lang['estimate_request_date_added']            = 'Date Created';
+$lang['estmate_request_tags_updated']           = 'Tags Updated';
+$lang['not_estimate_request_activity_status_updated'] = '%s updated estimate request status from %s to %s';
+$lang['estimate_request_lowercase']             = 'estimate request';
+$lang['estimate_request_form_email_field_is_required']     = 'Email field is required to be added on the form';
+$lang['estimate_request_form_email_field_set_to_required'] = 'Mark the email field as required';
+$lang['not_delete_estimate_request_default_status']        = 'Cannot delete core estimate request status';
+$lang['mark_estimate_request_as']               = 'Mark as %s';
+$lang['estimate_request_updated']              = 'Estimate Request Updated';
+$lang['convert_estimate_request']               = 'Convert Estimate Request';
+$lang['estimate_request_client_firstname']      = 'First Name';
+$lang['estimate_request_client_lastname']       = 'Last Name';
+$lang['estimate_request_email']                 = 'Email';
+$lang['estimate_request_for_lead']              = 'Lead';
+$lang['estimate_request_for_customer']          = 'Customer';
+$lang['estimate_request_related']               = 'Related to';
+$lang['estimate_request_client_created_success'] = 'Estimate Request Customer Created';
+$lang['estimate_request_assigned']              = 'Staff Assigned';
+$lang['not_estimate_request_activity_assigned_updated']       = 'Estimate Request Assigned to %s';
+$lang['estimate_request_status_lowercase']      = 'estimate request status';
+$lang['estimate_request_assigned_to_staff']     = 'Estimate Request has been assigned to you';
+
+$lang['activity_due_reminder_is_sent']          = '%s sent invoice becoming due reminder';
+$lang['invoice_due_notice_before']              = 'Send due reminder X days before due date';
+$lang['overdue_notices']                        = 'Overdue Notices';
+$lang['invoice_overdue_notices_info']           = 'Overdue notices are sent when the invoice becomes overdue.';
+$lang['due_reminders']                          = 'Due Reminders';
+$lang['due_reminders_for_invoices_info']        = 'Due reminders are sent to unpaid and partially paid invoices as reminder to the customer to pay the invoice before is due.';
+$lang['expenses_list_made_payment_by']          = 'Made Payment by %s';
+
+# Version 2.8.2
+$lang['hide_task_checklist_items_completed']          = 'Hide completed items';
+$lang['show_task_checklist_items_completed']          = 'Show completed items %s';
+$lang['task_checklist_assign']                        = 'Assign staff';
+$lang['task_checklist_assigned']                      = 'Assigned to %s';
+
+# Version 2.8.3
+$lang['projects_send_contact_notification']                   = 'Send contacts notifications';
+$lang['project_send_all_contacts_with_notifications_enabled'] = 'To all contacts with notifications for projects enabled';
+$lang['project_do_not_send_contacts_notifications']           = 'Do not send notifications';
+$lang['project_send_specific_contacts_with_notification']     = 'Specific contacts';
+$lang['project_contacts_to_notify']                           = 'Select contacts to notify';
+$lang['contract_signed_by']                                   = 'Signer Name';
+$lang['contract_signed_date']                                 = 'Signed Date';
+$lang['contract_signed_ip']                                   = 'IP Address';
+$lang['show_estimate_request_in_customers_area']              = 'Show Estimate request link in customers area?';
+$lang['customers_estimate_request_link_text']                 = 'Request Estimate';
+$lang['total_expenses_deleted']                               = 'Total Expenses Deleted: %s';
+$lang['estimate_convert_to_project']                          = 'Convert to Project';
+$lang['estimate_items_convert_to_tasks']                      = 'Items that will be converted to tasks';
+
+# Version 2.9.0
+$lang['home_payment_records']                                 = 'Payment Records';
+$lang['weekly']                                               = 'Weekly';
+$lang['monthly']                                              = 'Monthly';
+$lang['failed_to_update_timesheet']                           = 'Timesheet was not updated';
+$lang['permission_create_timesheets']                         = 'Create Timesheets';
+$lang['permission_edit_timesheets']                           = 'Edit Timesheets (Global)';
+$lang['permission_edit_own_timesheets']                       = 'Edit Own Timesheets';
+$lang['permission_delete_timesheets']                         = 'Delete Timesheets (Global)';
+$lang['permission_delete_own_timesheets']                     = 'Delete own Timesheets';
+$lang['permission_edit_milestones']                           = 'Edit Milestones';
+$lang['permission_delete_milestones']                         = 'Delete Milestonea';
+$lang['add_timesheet'] 										  = 'Add timesheet';
+$lang['submit_button_bg_color']                               = 'Submit button background color';
+$lang['submit_button_text_color']                             = 'Submit button background text';
+$lang['automatically_assign_ticket_to_first_staff_responding'] = 'Automatically assign the ticket to the first staff that post a reply?';
+
+# Version 2.9.1
+$lang['contract_signed_not_all_fields_editable'] = 'This contract is signed, hence not all fields can be edited until the signature is removed.';
+$lang['form_submit_success_action']              = 'What should happen after a visitor submits this form';
+$lang['form_submit_success_display_thank_you']   = 'Display thank you messsage';
+$lang['form_submit_success_redirect_to_website'] = 'Redirect to another website';
+$lang['form_submit_website_url']                 = 'Website URL';
+
+# Version 2.9.2
+$lang['open_google_map']                                    = 'Open in Google Map';
+$lang['milestone_start_date']                               = 'Start Date';
+$lang['send_reminder_for_completed_but_not_billed_tasks']   = 'Send an email reminder of billable tasks completed but not billed';
+$lang['staff_to_notify_completed_but_not_billed_tasks']     = 'Select which staff members you want to receive the reminder';
+$lang['reminder_for_completed_but_not_billed_tasks_days']   = 'Select days of the week reminder should be sent';
+$lang['notifications']                                      = 'Notifications';
+$lang['merged']                                             = 'Merged';
+$lang['ticket_merged_notice']                               = 'This ticket is merged into the ticket with ID';
+$lang['view_primary_ticket']                                = 'View primary ticket';
+$lang['merge_tickets']                                      = 'Merge Tickets';
+$lang['primary_ticket']                                     = 'Primary Ticket';
+$lang['primary_ticket_status']                              = 'Primary Ticket Status';
+$lang['tickets_merged']                                     = 'Tickets Merged Successfully';
+$lang['cannot_merge_into_merged_ticket']                    = 'Ticket that is merged into another ticket cannot be used as primary ticket';
+$lang['merge_ticket_ids_field_label']                       = 'Merge Ticket #';
+$lang['merge_ticket_ids_field_placeholder']                 = 'example: 5 or 5,6';
+$lang['cannot_merge_tickets_with_ids']                      = 'Ticket %s is already merged in another ticket';
+$lang['ticket_merged_tickets_header']                       = 'This ticket contains %s tickets that are merged';
+$lang['batch_payments_table_invoice_number_heading']        = 'Invoice Number';
+$lang['batch_payments_table_payment_date_heading']          = 'Payment Date';
+$lang['batch_payments_table_payment_mode_heading']          = 'Payment Mode';
+$lang['batch_payments_table_transaction_id_heading']        = 'Transaction Id';
+$lang['batch_payments_table_amount_received_heading']       = 'Amount received';
+$lang['batch_payments_table_invoice_balance_due']           = 'Invoice Balance Due';
+$lang['add_batch_payments']                                 = 'Add Payments';
+$lang['batch_payment_filter_by_customer']                   = 'Filter invoices by customer';
+$lang['batch_payments']                                     = 'Batch Payments';
+$lang['batch_payment_added_successfully']                   = 'You have successfully added %s payments';
+$lang['batch_payments_send_invoice_payment_recorded']       = 'Do not send invoice payment recorded email to customer contacts';
+$lang['invoice_batch_payments']                             = 'Batch Payment';
+$lang['staff_is_currently_replying']                        = '%s is currently replying to ticket.';
+
+# Version 2.9.4
+$lang['permission_view_timesheet_report']                   = 'View Timesheets Report';
+$lang['timesheets_overview_all_members_notice_permission']  = 'Timesheet overview for all staff members is only available for Staff with Permission to view timesheet reports and administrators.';
+$lang['show_project_on_proposal']                           = 'Show Project Name On Proposal';
+$lang['ticket_reports_staff']                               = 'Staff Member';
+$lang['ticket_reports_total_assigned']                      = 'Total Assigned Tickets';
+$lang['ticket_reports_open_tickets']                        = 'Open Tickets';
+$lang['ticket_reports_closed_tickets']                      = 'Closed Tickets';
+$lang['ticket_reports_replies_to_tickets']                  = 'Replies To Tickets';
+$lang['ticket_reports_average_reply_time']                  = 'Average Reply Time';
+$lang['home_tickets_report']                                = 'Staff Tickets Report';
+$lang['ticket_reports_average_reply_time_help']             = "Average response time from assigned tickets.";
+$lang['created_by']                                         = 'Created by';
+
+$lang['staff_related_ticket_notification_to_assignee_only']	= 'Send staff-related ticket notifications to the ticket assignee only';
+$lang['staff_related_ticket_notification_to_assignee_only_help'] = 'If this option is set to Yes and the ticket does not have an assignee, notification will be sent to all staff that belongs to the ticket department';
+$lang['import_expenses'] = 'Import Expenses';
+$lang['show_pdf_signature_proposal'] = 'Show PDF Signature on Proposal';
+$lang['enable_honeypot_spam_validation'] = 'Enable Honeypot spam validation';
